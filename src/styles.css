@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-left.css');
 
 *{
     padding: 0;
@@ -34,12 +35,9 @@
 
 .container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    background-color: white;
-    border-radius: 15px;
-    width: 400px;
-    height: 250px;
 }
 
 .Interface{
@@ -47,8 +45,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    background: white;
+    border-radius: 15px;
+    width: 400px;
+    height: 250px;
 }
 
 h1{
@@ -57,6 +57,15 @@ h1{
     color:cornflowerblue;
     width: 100%;
     border-bottom: 2px solid grey;
+}
+
+h2{
+    align-self: center;
+    justify-self: center;
+    font-size: 40px;
+    text-align: center;
+    color:cornflowerblue;
+    width: 100%;
 }
 
 #info{
@@ -72,27 +81,42 @@ h1{
     justify-content: space-around;
     width: 100%;
     height: 150%;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 15px;
+    width: 400px;
+    height: 250px;
 }
 
 .graus{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 60%;
+    width: 100%;
+    border-top: 2px solid grey;
 }
 
 #temp{
     font-size: 30px;
     font-weight: 600;
-    color: cornflowerblue;
 }
 
 #cond{
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.gg-arrow-left{
+    color: cornflowerblue;
+    align-self: center;
+    justify-self: left;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
 }
 
 input{
@@ -114,7 +138,7 @@ button{
 }
 
 img{
-    width: 70px;
+    width: 90px;
 }
 
 /* Creditos*/
@@ -150,4 +174,16 @@ a {
   font-weight: 600;
 }
 
+/*Mensagem de erro*/
+#erro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(223, 60, 60, 0.61);
+    height: 50px;
+    width: 80%;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 20px;
+}
 
