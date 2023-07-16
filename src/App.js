@@ -2,13 +2,14 @@ import { useState} from "react";
 import "./styles.css";
 
 const apiurl =
-  "http://api.weatherapi.com/v1/current.json?key=346ac1769e7248248bc173005231407&q=";
+  "https://api.weatherapi.com/v1/current.json?key=346ac1769e7248248bc173005231407&q=";
 
 const App = () => {
   const [previsao, setPrevisao] = useState(null);
 
   const [searchTerm, setSearchTerm] = useState("");
 
+//Usa a API para buscar a cidade e, se positivo, a adiciona à "previsao"
   const handleSearch = () => {
     fetch(`${apiurl}${searchTerm}&lang=pt`)
       .then((response) => {
@@ -17,11 +18,11 @@ const App = () => {
         }
       })
       .then((data) => {
-        console.log(data);
         setPrevisao(data);
       });
   };
 
+//chama "handleSearch" ao pressionar Enter na busca
     const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch();
@@ -50,7 +51,7 @@ const App = () => {
           </div>
         ) : (
           <div className="Interface">
-            <h1>Site Tempo</h1>
+            <h1>Site Clima</h1>
 
             <p id="info">Digite sua cidade:</p>
 
